@@ -85,7 +85,8 @@ timerEl.textContent=timeLeft
 
     // check if we've run out of questions or if time ran out?
     if (timeLeft <= 0 || currentQuestionIndex === questions.length) {
-console.log('gameover')
+
+      console.log('gameover')
      
     
     } else {getQuestion();
@@ -99,7 +100,7 @@ console.log('gameover')
     clearInterval(time);
     // show end screen
     var endScreenEl = document.getElementById('hide');
-    endScreenEl.removeAttribute('');
+    endScreenEl.removeAttribute('class');
 
     // show final score
     var finalScoreEl = document.getElementById('final-scores');
@@ -118,7 +119,9 @@ console.log('gameover')
       quizEnd();
     }
   }
+function saveHighscore () {
 
+}
   
   function checkForEnter(event) {
     // "13" represents the enter key

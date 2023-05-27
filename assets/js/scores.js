@@ -1,13 +1,13 @@
 function printHighscores() {
   // either get scores from localstorage or set to empty array
   var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
-var highscores = 20;
+var scores = [ 5, 10,15,20];
   // sort highscores by score property in descending order HINT: the sort method. 
-  
+  var result = highscores.sort((a,b) => b.value - a.value);
   for (var i = 0; i < highscores.length; i += 1) {
     // create li tag for each high score
-    var liTag = document.createElement('wrapper');
-    liTag.textContent = highscores[i].initials + ' - ' + highscores[i].score;
+    var liTag = document.createElement('highscores');
+    liTag.textContent = scores[i].initials + ' - ' + scores[i].score;
 
     // display on page
     var olEl = document.getElementById('highscores');
